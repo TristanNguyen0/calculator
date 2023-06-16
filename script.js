@@ -88,6 +88,9 @@ keys.forEach((key) => key.addEventListener('click', function(e){
 }));
 
 function update(answer){ //helper function to update display and primary at the same time after calling an operate
+    if (answer===Infinity){
+        answer = "you divided by 0...";
+    }
     clear();
     display.innerText = answer.toString();
     primary = answer.toString();
